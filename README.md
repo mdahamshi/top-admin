@@ -2,3 +2,5 @@
 Admin dashboard, [TOP project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard)
 
 [Live DEMO](https://mdahamshi.github.io/top-admin)
+
+![screenshot](./dashboard-project.png)
