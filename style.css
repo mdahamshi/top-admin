@@ -10,7 +10,6 @@
     --sb-conent-bg: #e2e8f0;
 }
 body {
-  background-color: rgb(247, 247, 247);
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.3;
@@ -31,7 +30,71 @@ body {
     height: 100vh;
 }
 .header {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 
+.header .header-top {
+    grid-row: 1 / 2;
+
+
+}
+.header .header-bottom, .header .header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .header-top .search-box, .header .header-bottom .left-side {
+    display: flex;
+    flex: 1 1 auto;
+    gap: 20px;
+    align-items: center;
+}
+.header .header-top .user-menu, .header .header-bottom .right-side {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.header .header-top .user-menu p {
+    font-size: 16px;
+    font-weight: bold;
+}
+.header .header-bottom .left-side p {
+    font-size: 12px;
+    font-weight: bold;
+}
+.header .header-top .avatar {
+    width: 45px;
+}
+.header .header-bottom .avatar {
+    width: 65px;
+}
+.avatar {
+    border-radius: 50%;
+}
+.header .header-top .search-box input {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--sb-conent-bg);
+    padding: 6px;
+    border-radius: 16px;
+    border: none;
+}
+.header button {
+    border-radius: 16px;
+    padding: 10px;
+    width: 80px;
+    background-color: var(--sb-theme-color);
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+.header .header-bottom {
+    grid-row: 2 / 5;
 }
 .sidebar {
     background-color: var(--sb-theme-color);
