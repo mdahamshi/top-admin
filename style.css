@@ -85,12 +85,15 @@ body {
     gap: 22px;
     list-style-type: none;
 }
-.sidebar-links li > i, .sidebar-settings li > i {
-    color: white;
-    margin-right: 20px;
+.sidebar-links li, .sidebar-settings li {
+    cursor: pointer;
+    
+
 }
-
-
+.sidebar-links li > i, .sidebar-settings li > i {
+    width: 20px;
+    margin-right: 20px;;
+}
 .content {
     background-color: var(--sb-conent-bg);
 
