@@ -21,8 +21,10 @@ body {
     background-color: white;
 }
 .sb-shadow {
-   box-shadow: 0px 5px 30px rgba(72,73,121,0.15) !important;
+   box-shadow: 4px 4px 4px rgba(72,73,121,0.15) !important;
+   z-index: 2;
 }
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -41,22 +43,23 @@ body {
 
 
 }
-.header .header-bottom, .header .header-top {
+
+.flex-row {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    gap: 25px;
     align-items: center;
 }
-.header .header-top .search-box, .header .header-bottom .left-side {
+.flex-col {
     display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.header .header-top .search-box {
     flex: 1 1 auto;
-    gap: 20px;
-    align-items: center;
+
 }
-.header .header-top .user-menu, .header .header-bottom .right-side {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+.header .header-bottom, .header .header-top {
+    justify-content: space-between;
 }
 .header .header-top .user-menu p {
     font-size: 16px;
@@ -92,6 +95,15 @@ body {
     border: none;
     font-weight: bold;
     font-size: 14px;
+}
+.header-top i:hover, .project .project-toolbar p > i:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    scale: 2;
+}
+.header button:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
 .header .header-bottom {
     grid-row: 2 / 5;
@@ -163,10 +175,41 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 30px 16px;
 }
-
+.content-title {
+    font-weight: bold;
+    font-size: 18px;
+}
 .projects-section {
     grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 25px;
+}
+.content-title {
+    grid-column: span 2;    
+}
+.project {
+    background-color: white;
+    border-left: 8px solid #f0b429;
+    border-radius: 6px;
+    padding: 32px 16px;
+    justify-content: space-between;
+}
+.project .project-toolbar {
+    align-self: flex-end;
+    margin-right: 8px;
+}
+.project .project-toolbar p > i {
+    position: relative;
+    left: 4px;
+    bottom: 4px;
+}
+.project .project-toolbar p {
+    z-index: 1000;
+    display: block;
 }
 .annoucment-section {
     grid-row: 1 / 2;
