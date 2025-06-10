@@ -207,6 +207,15 @@ body {
     padding: 32px 16px;
     justify-content: space-between;
 }
+.project .project-content > p, 
+.annocment-item > p, 
+.trending-item > div > p{
+    color: rgb(109, 108, 108);
+    font-size: 12px;
+}
+.project .project-content > p {
+    font-size: 14px
+}
 .project .project-toolbar {
     align-self: flex-end;
     margin-right: 8px;
